@@ -3,6 +3,17 @@ library(ggplot2)
 library(dplyr)
 library(tidyverse)
 
+future_value <- function(amount = 100, rate = 0.05, years = 1)
+{
+  return(amount*(1+rate)^years)
+}
+
+#' @title Annuity
+#' @desc Compounds Interest with annuity
+#' @param contrib contribution value (numeric)
+#' @param rate the interest rate (numeric)
+#' @param years the number of years to be evaluated (numeric)
+#' @return returns numeric constant value
 #' @title Annuity
 #' @desc Compounds Interest with annuity
 #' @param contrib contribution value (numeric)
